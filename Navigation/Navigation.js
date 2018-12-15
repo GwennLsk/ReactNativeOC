@@ -6,6 +6,7 @@ import { createAppContainer, createStackNavigator, createBottomTabNavigator } fr
 import Search from '../Components/Search'
 import FilmDetail from '../Components/FilmDetail'
 import Favorites from '../Components/Favorites'
+import Test from '../Components/Test'
 
 const SearchStackNavigator = createStackNavigator({
   Search: { // Ici j'ai appelé la vue "Search" mais on peut mettre ce que l'on veut. C'est le nom qu'on utilisera pour appeler cette vue
@@ -33,6 +34,9 @@ const FavoritesStackNavigator = createStackNavigator({
 
 const MoviesTabNavigator = createBottomTabNavigator(
   {
+    Test: {
+      screen: Test
+    },
     Search: {
       screen: SearchStackNavigator,
       navigationOptions: {
